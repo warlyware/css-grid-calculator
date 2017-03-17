@@ -1,3 +1,29 @@
-html {
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+h1 {
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+}
+button {
+    font-size: 2rem;
+    border: 1px solid #333;
+}
 
+.wrapper {
+    min-height: 100vh;
+}
+.modifiers button {
+    background-color: #D6D6D6;
+}
+.operations button {
+    background-color: #F5923E;
+}
+.digits button {
+    background-color: #E0E0E0;
 }
