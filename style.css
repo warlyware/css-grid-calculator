@@ -17,6 +17,7 @@ h1 {
 button {
     font-size: 2rem;
     border: 1px solid #333;
+    outline: none;
 }
 
 .wrapper {
@@ -33,24 +34,34 @@ button {
         "digit digit digit oper"
         "digit digit digit oper"
         "digit digit digit oper";
+    grid-auto-columns: 1fr;
 }
 
 .modifiers {
     grid-area: modif;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+.modifiers button {
+    background-color: #D6D6D6;
 }
 .operations {
     grid-area: oper;
 }
-.digits {
-    grid-area: digit;
-}
-
-.modifiers button {
-    background-color: #D6D6D6;
-}
 .operations button {
     background-color: #F5923E;
 }
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: digit;
+    flex-direction: row-reverse;
+}
+.digits .wide {
+    flex: 2 0 60%;
+    order: 1;
+}
 .digits button {
+    flex: 1 0 30%;
     background-color: #E0E0E0;
 }
