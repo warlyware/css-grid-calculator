@@ -4,6 +4,10 @@ html, body {
     font-family: sans-serif;
 }
 h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-area: total;
     background-color: #333;
     color: white;
     margin: 0;
@@ -18,6 +22,29 @@ button {
 .wrapper {
     min-height: 100vh;
 }
+.wrapper, .subgrid {
+    display: grid;
+}
+.wrapper {
+    grid-template-areas:
+        "total total total total"
+        "modif modif modif oper"
+        "digit digit digit oper"
+        "digit digit digit oper"
+        "digit digit digit oper"
+        "digit digit digit oper";
+}
+
+.modifiers {
+    grid-area: modif;
+}
+.operations {
+    grid-area: oper;
+}
+.digits {
+    grid-area: digit;
+}
+
 .modifiers button {
     background-color: #D6D6D6;
 }
